@@ -1,0 +1,56 @@
+<% include ../partials/header.ejs %>
+
+<main class="container">
+    <h1>Contracts list</h1>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="/users/add" title="Add Contract">
+            <i class="fa fa-plus-circle"></i> Add a new Contract</a>
+       
+        </div> <!-- panel-heading -->
+        <% if (contracts.length > 0) { %>
+        <div class="panel-body table-responsive">
+            
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Contact Name</th>
+                        <th>Contact Number</th>
+                        <th>Email Address</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                </tbody>
+                
+                <% for (var i = 0; i < contracts.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= contracts[i].contactName %>
+                    </td>
+                    <td>
+                        <%= contracts[i].contactNumber %>
+                    </td>
+                    <td>
+                        <%= contracts[i].emailAddress %>
+                    </td>
+                    
+                    <td>
+                        <a href="/users/<%= contracts[i]._id %>" title="Edit" class="btn btn-primary">
+                            <i class="fa fa-pencil-square-o"></i>
+                        </a>
+                        
+                        <a href="/users/delete/<%= contracts[i]._id %>" title="Delete" onclick="return confirm('Are you sure you want to delete this?');" class="btn btn-danger">
+                            <i class="fa fa-trash-o"></i>
+                        </a>
+                    </td>   
+                    
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </div> <!-- panel-body -->
+        <% } %>
+    </div><!-- panel panel-default -->
+
+</main>
+<% include ../partials/footer.ejs %>

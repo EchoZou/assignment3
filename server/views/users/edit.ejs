@@ -1,0 +1,39 @@
+<% include ../partials/header.ejs %>
+<main class="container">
+    <h1>Edit a User</h1>
+    <div class="col-sm-4">
+        <form method="post">
+            
+            <fieldset class="form-group">
+                <label for="contactName">Contact Name: *</label>
+                <input name="contactName" type="text" class="form-control" required value="<%= contract.contactName %>" />
+            </fieldset>
+            
+            <fieldset class="form-group">
+                <label for="contactNumber">Contact Number: *</label>
+                <input name="contactNumber" type="text" class="form-control" required value="<%= contract.contactNumber %>" />
+            </fieldset>
+            
+            <fieldset class="form-group">
+                <label for="emailAddress">Email Address: *</label>
+                <input name="emailAddress" type="text" class="form-control" required value="<%= contract.emailAddress %>" />
+            </fieldset>
+            
+            <fieldset class="form-group text-right">
+                <button type="submit" class="btn btn-primary" title="Update">
+                    <i class="fa fa-pencil-square-o"></i> Update</button>
+                    
+                <a href="/users/delete/<%= contract._id %>" title="Delete" onclick="return confirm('Are you sure you want to delete this?');" class="btn btn-danger">
+                    <i class="fa fa-trash-o"></i> Delete
+                </a>
+                
+                <a href="/users" title="Cancel"  class="btn btn-default">
+                    <i class="fa fa-undo"></i>  Cancel
+                </a>
+            </fieldset>
+            
+        </form>
+    </div>
+
+</main>
+<% include ../partials/footer.ejs %>

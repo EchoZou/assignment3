@@ -1,0 +1,32 @@
+<% include ../partials/header.ejs %>
+
+<main class="container">
+    <h1>Add a New Contract</h1>
+       <div class="col-sm-4">
+        <form method="post">
+        
+            <fieldset class="form-group">
+                <label for="contactName">Contact Name: *</label>
+                <input name="contactName" type="text" class="form-control" required autofocus />
+            </fieldset>
+            
+            <fieldset class="form-group">
+                <label for="contactNumber">Contact Number: *</label>
+                <input name="contactNumber" type="text" class="form-control" required />
+            </fieldset>
+            
+            <fieldset class="form-group">
+                <label for="emailAddress">Email Address: *</label>
+                <input name="emailAddress" type="email" class="form-control" required />
+            </fieldset>
+            
+            <fieldset class="form-group text-right">
+                <input type="submit" class="btn btn-success" value="Submit"/>
+            </fieldset>
+            
+        </form>
+    </div>
+
+</main>
+
+<% include ../partials/footer.ejs %>

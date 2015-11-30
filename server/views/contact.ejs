@@ -1,0 +1,38 @@
+<%- include partials/header.ejs %>
+
+
+
+<h1 class="text-center">Contact me</h1>
+
+
+
+<!-- text and submit -->
+<nav>
+    <p></p><br /><br /><br />
+<div class="col-md-10 col-md-offset-4">  
+    <div class ="form-group">
+    <label for="name" class = "col-sm-2"><%= name %></label>
+    <input name="name" />
+    </div> 
+    
+    <div class ="form-group"> 
+    <label for="password" class ="col-sm-2"><%= email %></label>
+    <input name="email" type="email" />
+    </div>
+    
+    <div class ="form-group">
+    <label for="comment" class ="col-sm-2"><%= todo %></label><br />
+    <textarea name='comment' type="comment"></textarea><br />
+    </div>
+        
+    <div class="col-sm-offset-2">
+    <input type="submit" value="submit" class ="btn btn-lg btn-danger"/>
+    </div>      
+    
+</div>    
+</nav>
+
+
+
+    
+<%- include partials/footer.ejs %>
